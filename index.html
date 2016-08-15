@@ -26,7 +26,7 @@
 
 		<!-- CSS -->
 		<!-- build:css css/style.min.css -->
-		<link rel="stylesheet" href="bower_components/OwlCarousel/owl-carousel/owl.carousel.css" />
+		<!--<link rel="stylesheet" href="bower_components/OwlCarousel/owl-carousel/owl.carousel.css" />-->
 		<link rel="stylesheet" type="text/css" href="styles/style.css" />
 		<!-- endbuild -->
 
@@ -36,15 +36,27 @@
 	
 		<!--[if lt IE 8]>
 		    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-
+		<![endif]-->	
+		
+		<div ng-app="mainModule">
+		<header>
+			<h1>My Components</h1>
+		</header>
+		<div class="container" style="display:inline-block;">
+		
 		<!-- Navigation -->
-		<main-nav></main-nav>
+		<main-nav-directive></main-nav-directive>
 
 		<!-- Main view for templates -->
-		<div data-ng-view="" class="container"></div>
+		<div id="main" ng-view ></div>
+		
+		</div>
+		<footer>
+		@copyright info
+		</footer>
+        </div>
 
-	</body>
+
 
 	<!-- Vendors -->
 	<!-- build:nonangularlibs js/nonangularlibs.js -->
@@ -55,14 +67,14 @@
 	<!-- build:libs js/libs.js -->
 	<script type="text/javascript" src="js/nonangular/lodash.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
-	<script type="text/javascript" src="bower_components/OwlCarousel/owl-carousel/owl.carousel.min.js"></script>
+	<!--<script type="text/javascript" src="bower_components/OwlCarousel/owl-carousel/owl.carousel.min.js"></script>-->
 	<!-- endbuild -->
 
 	<!-- Angular external libraries for application -->
 	<!-- build:angularlibs js/angularlibs.js -->
-	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
-	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-	<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script type="text/javascript" src="js/angular/angular.js"></script>
+	<script type="text/javascript" src="js/angular-route/angular-route.js"></script>
+	<!--<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>-->
 	<!-- endbuild -->
 
 	<!-- Angular components -->
@@ -95,5 +107,5 @@
 	    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 	    ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 	</script>
-
+	</body>
 </html>

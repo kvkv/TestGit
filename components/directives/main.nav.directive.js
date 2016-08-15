@@ -11,19 +11,14 @@
    * <main-nav><main-nav/>
    *
    */
-  angular
-    .module('boilerplate')
-    .directive('mainNav', tinMainNav);
-
-  function tinMainNav() {
-
-    // Definition of directive
-    var directiveDefinitionObject = {
-      restrict: 'E',
-      templateUrl: 'components/directives/main-nav.html'
-    };
-
-    return directiveDefinitionObject;
+  moduleObj.directive("mainNavDirective",function()
+  {
+	  
+	  var directiveObj = {};
+	  directiveObj.restrict = "EA";
+	  directiveObj.templateUrl = "components/directives/main-nav.html";
+	  directiveObj.replace = false;
+	  return directiveObj;
   }
-
+  
 })();
